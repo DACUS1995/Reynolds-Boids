@@ -30,9 +30,13 @@ class Boid
 	{
 		for(let obstacle of obstacles)
 		{
-			if(p5.Vector.dist(obstacle.position, this.position) < (obstacle.radius + this.length))
+			let distance = p5.Vector.dist(obstacle.position, this.position);
+			if(distance < (obstacle.radius + this.length))
 			{
-				this.velocity.sub(p5.Vector.sub(obstacle.position, this.position));
+				distance /=obstacle.radius + this.length;
+				// let slope_1 = (obstacle.position.y - this.position.y) / (obstacle.position.x - this.position.x);
+				// let slope = -(1 / slope_1);
+				this.velocity.sub(p5.Vector.sub(obstacle.position, this.position).mult(1 - distance));
 			}
 		}
 	}
