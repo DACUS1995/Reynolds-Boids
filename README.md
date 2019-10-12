@@ -10,4 +10,4 @@ The original paper: [Flocks, Herds, and Schools: A Distributed Behavioral Model]
 ---
 
 Screenshot:
-![alt text](https://github.com/DACUS1995/Reynolds-Boids/blob/master/images/Screenshot_1.png "Content")
+![alt text](https://github.com/DACUS1995/Reynolds-Boids/blob/master/images/Screenshot_2.png "Content")
