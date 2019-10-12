@@ -52,7 +52,7 @@ let fnP5Callback = (sk) => {
 	}
 
 	sk.draw = () => {
-		sk.background(31);
+		sk.background('rgba(0,255,0, 0.25)');
 		population.step();
 	}
 	

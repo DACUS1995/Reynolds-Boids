@@ -89,7 +89,7 @@ class Boid
 
 	velocity_matching(boids)
 	{
-		let distance_treshold = 50;
+		let distance_treshold = 100;
 		let new_velocity = this.sk.createVector(0,0);
 
 		let count = 0;
@@ -110,7 +110,7 @@ class Boid
 		if(count > 0)
 		{
 			new_velocity.div(count);
-			return new_velocity.sub(this.velocity).div(10);
+			return new_velocity.sub(this.velocity).div(2);
 		}
 		else 
 		{
@@ -142,7 +142,7 @@ class Boid
 		if (count > 0) 
 		{
 			center.div(count);
-			center.sub(this.position).div(50);
+			center.sub(this.position).div(200);
 			return center
 		} 
 		else 
@@ -155,8 +155,8 @@ class Boid
 	{
 		// Draw a triangle rotated in the direction of velocity
 		let theta = this.velocity.heading() + this.sk.radians(90);
-		this.sk.fill(127);
-		this.sk.stroke(200);
+		this.sk.fill(31);
+		this.sk.stroke(21);
 		this.sk.push();
 		this.sk.translate(this.position.x, this.position.y);
 		this.sk.rotate(theta);
